@@ -10,7 +10,8 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_chef-11.4.0.box"
   config.ssh.forward_agent = true
 
-  config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 3000, host: 3000 # rails default
+  config.vm.network :forwarded_port, guest: 4567, host: 4567 # sinatra default
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
