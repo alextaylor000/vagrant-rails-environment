@@ -44,8 +44,11 @@ Install PuTTY (follow the relevant parts of [these instructions](http://www.site
 Use PuTTY to connect to your Vagrant box:
 
 Host: localhost
+
 Port: 2222
+
 Username: vagrant
+
 Password: vagrant
 
 
